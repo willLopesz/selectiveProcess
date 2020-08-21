@@ -1,0 +1,146 @@
+<div class="row align-items-center">
+
+    <div class="col-md-auto mx-auto formAreaAccess">
+
+        <div class="row">
+    
+            <div class="col headerForm">
+    
+                <div class="row">
+                    
+                    <div class="col title">
+    
+                        Customer Manager    
+    
+                    </div>
+                    
+                </div>
+    
+                <div class="row">
+    
+                    <div class="col description">
+    
+                        realize seu login e desfrute da Simplicidade
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="row">
+    
+            <div class="col-md-auto ml-auto mr-auto realFormArea">
+
+                <div class="row">
+
+                    <form class="col" name="loginForm" novalidate ng-submit="registerUser()">
+
+                        <div class="row">
+            
+                            <div class="col ml-auto mr-auto inputArea inputDocument">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        CPF
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="text" name="document" class="col" ng-model="user.document" mask="999.999.999-99" required>
+                                    
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="loginForm.document.$touched && loginForm.document.$invalid">
+
+                                <span ng-if="loginForm.document.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+                                <span ng-if="loginForm.document.$error.mask">
+                                    Informe um CPF válido
+                                </span>
+
+                            </div>
+
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="col inputArea inputSenha">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        Senha
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="password" name="password" class="col" ng-model="user.password" required="required">
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="loginForm.password.$touched && loginForm.password.$invalid">
+
+                                <span ng-if="loginForm.password.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+
+                            </div>
+
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="col btnLogin" ng-click="login()">
+            
+                                Acessar
+            
+                            </div>
+            
+                        </div>
+    
+                    </form>
+
+                </div>
+    
+                <div class="row">
+    
+                    <div class="col-md-auto ml-auto mr-auto emp">
+    
+                        Ainda não possui uma conta? <span ng-click="goToRouting('/register')">Registre-se já!</span>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+</div>

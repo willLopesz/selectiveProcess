@@ -1,0 +1,245 @@
+<div class="row align-items-center">
+
+    <div class="col-md-auto mx-auto  formAreaAccess">
+
+        <div class="row">
+    
+            <div class="col headerForm">
+    
+                <div class="row">
+                    
+                    <div class="col title">
+    
+                        Customer Manager    
+    
+                    </div>
+                    
+                </div>
+    
+                <div class="row">
+    
+                    <div class="col description">
+    
+                        Não perca tempo, crie sua conta e simplifique sua vida
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        
+
+        <div class="row">
+    
+            <div class="col-md-auto ml-auto mr-auto realFormArea">
+    
+                <div class="row">
+
+                    <form class="col" name="registerForm" novalidate ng-submit="registerUser()">
+
+                        <div class="row">
+    
+                            <div class="col ml-auto mr-auto inputArea inputName">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        Nome completo
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="text" name="name" class="col" ng-model="user.name" required>
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="registerForm.name.$touched && registerForm.name.$invalid">
+
+                                <span ng-if="registerForm.name.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+
+                            </div>
+
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="col ml-auto mr-auto inputArea inputDocument">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        CPF
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="text" name="document" class="col" ng-model="user.document" mask="999.999.999-99" required>
+                                    
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="registerForm.document.$touched && registerForm.document.$invalid">
+
+                                <span ng-if="registerForm.document.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+                                <span ng-if="registerForm.document.$error.mask">
+                                    Informe um CPF válido
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <!--
+                        <div class="row">
+            
+                            <div class="col ml-auto mr-auto inputArea inputNickName">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        Nome de usuário
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="text" class="col" ng-model="user.userName" required="required">
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                        -->
+                        <div class="row">
+            
+                            <div class="col inputArea inputSenha">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        Senha
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="password" name="password" class="col" ng-model="user.password" required="required">
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="registerForm.password.$touched && registerForm.password.$invalid">
+
+                                <span ng-if="registerForm.password.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+
+                            </div>
+
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="col inputArea inputSenha">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        confirmar Senha
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="password" name="confirmPassword" class="col" ng-model="confirmPassword" required="required" compare-to="user.password">
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="registerForm.confirmPassword.$touched && registerForm.confirmPassword.$invalid">
+
+                                <span ng-if="registerForm.confirmPassword.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+                                <span ng-if="registerForm.confirmPassword.$error.compareTo && !registerForm.confirmPassword.$error.required">
+                                    As senhas não conferem
+                                </span>
+
+                            </div>
+
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="col btnLogin" ng-click="registerUser()">
+            
+                                Registrar-se
+            
+                            </div>
+            
+                        </div>
+
+                    </form>
+
+                </div>
+    
+                <div class="row">
+    
+                    <div class="col-md-auto ml-auto mr-auto emp">
+    
+                        Já possui uma conta? <span ng-click="goToRouting('/login')">Faça seu login!</span>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+</div>

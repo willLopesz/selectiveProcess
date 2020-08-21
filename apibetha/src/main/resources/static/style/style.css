@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Archivo|Arimo|Barlow|Muli|Roboto+Mono&display=swap');
+
+*{
+
+	padding: 0px ;
+	margin: 0px ;
+	user-select: none;
+	font-family: "Montserrat";
+
+}
+
+body{
+
+	background: rgba(176,224,230, 0.6);
+
+}
+
+.label{
+
+	line-height: 15px;
+	font-weight: 700;
+	color: #555;
+	padding: 0px;
+	font-size: 10.5px;
+	text-transform: uppercase;
+
+}
+
+/*
+
+    Design Access Page
+
+*/
+
+.formAreaAccess{
+
+	width: 400px;
+	background: #fff;
+    margin-top: 90px;
+    margin-bottom: 20px;
+	border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.4);
+    padding: 20px;
+
+}
+
+.formAreaAccess .title{
+
+    font-weight: 800;
+	color: #233b75;
+	text-transform: uppercase;
+	text-align: center;
+    font-size: 27px;
+
+}
+
+.formAreaAccess .description{
+
+	font-size: 14px;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 8px;
+    text-align: center;
+    text-transform: lowercase;
+	color: #555;
+
+}
+
+.formAreaAccess .realFormArea{
+
+	width: 380px;
+	margin-top: 10px;
+
+}
+
+.inputArea{
+
+	height: 50px;
+	background:#eee;
+	border-radius: 5px;
+	margin-top: 25px;
+
+}
+
+.inputArea .label{
+
+	margin-top: -15px;
+	height: 15px;
+
+}
+
+.inputArea input{
+
+	height: 50px;
+	border: none;
+	background: transparent;
+	font-size: 15px;
+	outline: none;
+	border-radius: 5px;
+
+}
+
+input.ng-touched.ng-invalid {
+
+	background-color: rgba(172, 70, 57, 0.35);
+
+}
+
+.errorSpan span{
+
+	text-transform: uppercase;
+	font-size: 10.5px;
+	font-weight: 800;
+	color:rgba(172, 70, 57, 0.5);
+	margin-left: -10px;
+
+}
+
+.formAreaAccess .realFormArea .btnLogin{
+
+	height: 45px;
+	border-radius: 8px;
+	background-color: #233b75;
+	line-height: 45px;
+	color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 12px;
+	cursor: pointer;
+	margin-top: 25px;
+	text-align: center;
+	transition: background-color 0.5s;
+
+}
+
+.formAreaAccess .realFormArea .btnLogin:hover{
+
+	background-color:#0F2250;
+
+}
+
+.formAreaAccess .realFormArea .emp{
+
+	font-weight: 800;
+	color: #555;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 0px;
+	margin-top: 20px;
+
+}
+
+.formAreaAccess .realFormArea .emp span:hover{
+
+	color: #233b75;
+	cursor: pointer;
+
+}
+
+input[type="password"]{
+
+	letter-spacing: 3.5px;
+
+}
+
+
+/*
+
+    Desing Header Template
+
+*/
+
+.headerArea{
+	margin: 20px;
+	height: 130px;
+}
+
+.headerArea .title{
+
+    font-weight: 800;
+	color: #233b75;
+	text-transform: uppercase;
+    font-size: 45px;
+
+}
+
+.headerArea .description{
+
+    font-size: 20px;
+    text-transform: lowercase;
+    color: #555;
+    margin-top: -12px;
+
+}
+
+.headerArea .diviser{
+
+    background-color: #233b75;
+    border-radius: 10px;
+    width: 90vw;
+    height: 1.5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+
+/*
+
+Design Home
+
+*/
+
+.tableArea td{
+
+	vertical-align: middle;
+
+}
+
+.tableArea th{
+
+	vertical-align: middle;
+
+}
+
+.tableArea .tdButtom{
+
+	text-align: end;
+
+}
+
+.tableArea .tdButtom .btnView{
+
+	background-color: #233b75;
+
+}
+
+.tableArea .tdButtom .btnEdit{
+
+	background-color: #EFC726;
+
+}
+
+.tableArea .tdButtom .btnDelete{
+
+	background-color: #BD1717;
+
+}
+
+.tableArea .tdButtom .imageButtom{
+
+	height: 15px;
+	width: 15px;
+
+}
+
+.tableArea .tablePagination .detailsPagination{
+
+	background-color: transparent !important;
+	color: #233b75;
+	border-color: #233b75 !important;
+
+}
+
+.tableArea .tablePagination .detailsPagination:hover {
+
+	background-color: #eee !important;
+
+}
+
+.btn-circle.btn-xl {
+
+	width: 90px;
+	height: 90px;
+	padding: 10px 16px;
+	font-size: 24px;
+	line-height: 1.33;
+	border-radius: 45px;
+
+  }
+
+  .btnDetails{
+
+	background-color: transparent;
+	border-color: #233b75;
+	border-width: 2.5px;
+
+  }
+
+  .btnDetails:hover{
+
+	background-color: #eee;
+	border-color: #233b75 !important;
+
+  }
+
+  .btnDetails .imageButtom{
+	  
+	width: 50px;
+	height: 50px;
+	  
+  }
+
+  .actionsArea .label{
+
+	margin-top: 10px;
+
+  }
+
+  .formRegister{
+	  width: 100vw;
+  }
+
+  .formRegister .inputArea{
+
+	margin-right: 12px !important;
+	margin-left: 12px !important;
+
+  }
+
+  .insertModel{
+
+	border: 0.5px solid #233b75;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	border-radius: 8px;
+	margin: 10px;
+
+  }
+
+ .verticalDiviser{
+
+	background-color: #233b75;
+	width: 2px !important;
+	min-height: fit-content;
+	margin-left: 15px;
+	margin-right: 15px;
+
+  }
+
+.horizontalDiviser{
+
+	background-color: #233b75;
+	min-width: max-content;
+	height: 2px !important;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+  }
+
+  .formRegister .btnNewInf{
+
+	line-height: 15px;
+	font-weight: 700;
+	color: #233b75;
+	font-size: 10.5px;
+	text-transform: uppercase;
+	border: 2px solid #233b75;
+	border-radius: 8px;
+
+  }
+
+  .formRegister .btnNewInf:hover{
+
+	background-color: #eee;
+
+  }
+
+  .baseInf{
+
+	color: #233b75;
+	font-weight: 800;
+	font-size: 22px;
+	margin-top: 15px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+
+  }
+
+  .contentList{
+
+	color: #555;
+	font-weight: 800;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+	text-align: justify;
+	margin-right: 15px;
+	margin-left: 15px;
+
+  }
+
+.buttom .btnDelete{
+
+	background-color: #BD1717;
+	width: 30px !important;
+	height: 30px !important;
+	padding: 0px !important;
+
+}
+
+.buttom .imageButtom{
+
+	height: 15px;
+	width: 15px;
+
+}
+
+.formCustomer{
+
+	padding-bottom: 40px;
+
+}
+
+.loading{
+
+	background-color: rgba(0,0,0, 0.7);
+	height: 100% !important;
+	width: 100vw;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+}
+
+.loading .imageLoading{
+
+	width: 80px;
+	height: 80px;
+	margin-top: calc(50vh - 40px);
+
+}

@@ -1,0 +1,434 @@
+<div class="row">
+
+    <div class="col registerCustomerPage">
+
+        <div class="row">
+
+            <div class="col headerArea">
+        
+                <div class="row">
+        
+                    <div class="col-md-auto mx-auto title">
+        
+                        Customer Manager
+        
+                    </div>
+        
+                </div>
+        
+                <div class="row">
+        
+                    <div class="col-md-auto mx-auto description">
+        
+                        Nunca foi tão simples gerenciar seus clientes
+        
+                    </div>
+        
+                </div>
+        
+                <div class="row">
+        
+                    <div class="col-md-auto mx-auto diviser">
+        
+                        
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        <div class="row">
+        
+            <form class="col-md-auto formRegister formCustomer" name="registerForm" novalidade ng-submit="registerCustomer()">
+        
+                <div class="row ">
+        
+                    <div class="col registerCustomer my-auto">
+                    
+                        <div class="row">
+    
+                            <div class="col ml-auto mr-auto inputArea inputName">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        Nome
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="text" name="name" class="col" ng-model="customer.name" required>
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="registerForm.name.$touched && registerForm.name.$invalid">
+
+                                <span ng-if="registerForm.name.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+
+                            </div>
+
+                        </div>
+            
+                        <div class="row">
+            
+                            <div class="col ml-auto mr-auto inputArea inputDocument">
+            
+                                <div class="row">
+            
+                                    <div class="col label">
+            
+                                        Ducumento
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="row">
+            
+                                    <input type="text" name="document" class="col" ng-model="customer.document" ui-br-cpfcnpj-mask required>
+                                    
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                        <div class="row">
+
+                            <div class="col errorSpan" ng-if="registerForm.document.$touched && registerForm.document.$invalid">
+
+                                <span ng-if="registerForm.document.$error.required">
+                                    Este campo é obrigatório
+                                </span>
+                                <span ng-if="registerForm.document.$error.mask">
+                                    Informe um CPF válido
+                                </span>
+
+                            </div>
+
+                        </div>
+        
+                        <div class="row justify-content-center" style="margin-top: 20px;">
+        
+                            <button type="button" class="btn btnDetails btn-circle btn-xl" ng-click="saveNewClient()">
+                                <img class="imageButtom" src="./images/check.png">
+                            </button>
+        
+                        </div>
+                        <div class="row">
+        
+                            <div class="col actionsArea">
+        
+                                <div class="row justify-content-center">
+            
+                                    <div class="col-md-auto label">
+                
+                                        Salvar Cliente
+                
+                                    </div>
+                
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                    <div class="verticalDiviser"></div>
+        
+                    <div class="col-8 registerCustomerInf">
+                        
+                        <div class="row" ng-repeat="a in addresses">
+        
+                            <div class="col insertModel formAddress">
+
+                                <div class="row">
+                                    <div class="col-md-auto mr-auto buttom" ng-if="verifyAddresses()">
+
+                                        <div class="btn btnDelete" ng-click="removeAddress($index)"><img ng-click="removeAddress($index)" class="imageButtom" src="./images/excluir.png"></div>
+
+                                    </div>
+                                    <div class="col-md-auto ml-auto form-check form-check-inline checkBox">
+
+                                        <input class="form-check-input bigcheck" name="address" type="radio" ng-model="mainAddress.code" ng-value="a.code">
+
+                                        <label class="form-check-label label my-auto" for="inlineCheckbox1">Endereço Principal</label>
+
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+        
+                                    <div class="col ml-auto mr-auto inputArea inputAddress">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                Endereço
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="address" class="col" ng-model="a.address" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                    <div class="col ml-auto mr-auto inputArea inputNumber">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                número
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="number" class="col" ng-model="a.number" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                    <div class="col ml-auto mr-auto inputArea inputCep">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                CEP
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="cep" class="col" ng-model="a.cep" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                </div>
+        
+                                <div class="row">
+        
+                                    <div class="col ml-auto mr-auto inputArea inputDistrict">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                Bairro
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="district" class="col" ng-model="a.district" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                    <div class="col ml-auto mr-auto inputArea inputCity">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                cidade
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="city" class="col" ng-model="a.city" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                    <div class="col ml-auto mr-auto inputArea inputState">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                Estado
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="state" class="col" ng-model="a.state" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                    <div class="col ml-auto mr-auto inputArea inputCountry">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                País
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="country" class="col" ng-model="a.country" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                        <div class="row justify-content-center">
+        
+                            <div class="col-md-auto btn btn btnNewInf" ng-click="addAddress()">
+        
+                                adicionar outro endereço
+                            
+                            </div>
+        
+                        </div>
+        
+                        <div class="row">
+        
+                            <div class="col horizontalDiviser"></div>
+        
+                        </div>
+        
+                        <div class="row" ng-repeat="p in phones">
+        
+                            <div class="col formContact insertModel">
+
+                                <div class="row">
+
+                                    <div class="col-md-auto mr-auto buttom" ng-if="verifyPhones()">
+
+                                        <div class="btn btnDelete" ng-click="removePhone($index)"><img ng-click="removePhone($index)" class="imageButtom" src="./images/excluir.png"></div>
+
+                                    </div>
+
+                                    <div class="col-md-auto ml-auto form-check form-check-inline checkBox">
+
+                                        <input class="form-check-input bigcheck" name="phone" type="radio" ng-model="mainPhone.code" ng-value="p.code">
+
+                                        <label class="form-check-label label my-auto" for="inlineCheckbox1">Telefone Principal</label>
+
+                                    </div>
+                                </div>
+        
+                                <div class="row">
+        
+                                    <div class="col ml-auto mr-auto inputArea inputNickname">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                Apelido
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="nickname" class="col" ng-model="p.name" required>
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                    <div class="col ml-auto mr-auto inputArea inputphone">
+            
+                                        <div class="row">
+                    
+                                            <div class="col label">
+                    
+                                                Telefone
+                    
+                                            </div>
+                    
+                                        </div>
+                    
+                                        <div class="row">
+                    
+                                            <input type="text" name="phone" class="col" ng-model="p.phone" mask="(99) 99999 9999" required>
+                                            
+                    
+                                        </div>
+                    
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                        <div class="row justify-content-center">
+        
+                            <div class="col-md-auto btn btn btnNewInf" ng-click="addPhone()">
+        
+                                Adicionar outro contato
+                            
+                            </div>
+        
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
+            </form>
+        
+        </div>
+
+    </div>
+
+</div>

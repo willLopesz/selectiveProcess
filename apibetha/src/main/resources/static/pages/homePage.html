@@ -1,0 +1,104 @@
+<div class="row">
+
+    <div class="col homePage">
+        
+        <div class="row">
+
+            <div class="col headerArea">
+
+                <div class="row">
+
+                    <div class="col-md-auto mx-auto title">
+
+                        Customer Manager
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-auto mx-auto description">
+
+                        Nunca foi tão simples gerenciar seus clientes
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-auto mx-auto diviser">
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col tableArea">
+
+                <div class="row">
+                    
+                    <table class="table table-striped table-borderless">
+                        <thead>
+                          <tr>
+                            <th scope="col-md-1">#</th>
+                            <th scope="col-md-3">Nome</th>
+                            <th scope="col-md-2">Documento</th>
+                            <th scope="col-md-auto"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="c in clients">
+                            <th scope="row">{{c.id}}</th>
+                            <td>{{c.name}}</td>
+                            <td>{{c.document}}</td>
+                            <td class="tdButtom">
+                                <Button class="btn btnView" ng-click="navigate('/view-customer')"><img class="imageButtom" src="./images/procurar.png"></Button>
+                                <Button class="btn btnDelete" ng-click="deleteClient(c.id)"><img class="imageButtom" src="./images/excluir.png"></Button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <button type="button" ng-click="goToRouting('/register-customer')" class="btn btnDetails btn-circle btn-xl">
+                <img class="imageButtom" src="./images/adicionar-usuario.png">
+            </button>
+
+        </div>
+        <div class="row">
+
+            <div class="col actionsArea">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-auto label">
+
+                        Adicione novos clientes
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
